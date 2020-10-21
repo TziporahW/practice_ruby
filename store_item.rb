@@ -6,18 +6,18 @@
 #puts "#{coats[:color]} coats cost $#{coats[:price]}."
 
 class Store
-	attr_reader :item, :color, :sale
-	attr_writer :price
-	def initialize(item, color, price, sale)
-		@item = item
-		@color = color
-		@price = price
-		@sale = sale
-	end
+  attr_accessor :item, :color, :sale, :price
 
-	def info
-		return "#{color} #{item} costs $#{@price}."
-	end
+  def initialize(item, color, price, sale)
+    @item = item
+    @color = color
+    @price = price
+    @sale = sale
+  end
+
+  def info
+    return "#{color} #{item} costs $#{@price}."
+  end
 end
 
 item1 = Store.new("shirts", "red", 20, false)
@@ -27,6 +27,3 @@ item2.price = 15
 puts item1.color
 puts item1.sale
 puts item1.item
-
-
-
