@@ -1,0 +1,14 @@
+class Store
+  attr_accessor :item, :color, :sale, :price
+
+  def initialize(input_options)
+    @item = input_options[:item]
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @sale = input_options[:sale]
+  end
+
+  def info
+    return "#{color} #{item} costs $#{@price}."
+  end
+end
